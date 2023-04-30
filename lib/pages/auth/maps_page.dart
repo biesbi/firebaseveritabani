@@ -88,6 +88,7 @@ class _MapsState extends State<Maps> {
     for (int i = 0; i < numMarkers; i++) {
       double lat = 40.123341 + random.nextDouble() * 0.0009 - 0.00045;
       double lng = 26.410245 + random.nextDouble() * 0.0009 - 0.00045;
+
       markers.add(
         Marker(
           markerId: MarkerId('marker$i'),
@@ -97,7 +98,7 @@ class _MapsState extends State<Maps> {
               context: context,
               builder: (_) => AlertDialog(
                 title: Text('Bonus Kazandınız'),
-                content: Text('Tebrikler, bonus kazandınız!'),
+                content: Text('Tebrikler, bonus kazandınız! ID: marker$i'),
                 actions: [
                   TextButton(
                     onPressed: () {

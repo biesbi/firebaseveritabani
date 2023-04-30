@@ -5,12 +5,10 @@ import 'package:flutter_samet_aydin/pages/auth/bonus_page.dart';
 import 'package:flutter_samet_aydin/pages/auth/entry/first_page.dart';
 import 'package:flutter_samet_aydin/pages/auth/entry/login_page.dart';
 
-import 'package:flutter_samet_aydin/pages/auth/entry/maps_page.dart';
-
 import 'package:flutter_samet_aydin/pages/auth/maps_page.dart';
 import 'package:flutter_samet_aydin/pages/auth/entry/reset_page.dart';
 import 'package:flutter_samet_aydin/pages/auth/settings_screen.dart';
-import 'package:flutter_samet_aydin/pages/auth2/form_screen.dart';
+import 'package:flutter_samet_aydin/pages/auth2/widgets/form_screen.dart';
 import 'package:flutter_samet_aydin/pages/auth2/second_page.dart';
 import 'package:flutter_samet_aydin/pages/auth/entry/sign_up.dart';
 import 'package:flutter_samet_aydin/pages/auth2/home_page.dart';
@@ -52,14 +50,13 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         routes: {
-          "/formPage": (context) => EmailScreen(),
+          "/formPage": (context) => UsersScreen(),
           "/bonusPage": (context) => BonusPage(),
           "/ayarlarPage": (context) => SettingsScreenPage1(),
           "/restoranPage": (context) => HomePage(),
           "/resetPage": (context) => ResetPage(),
           "/secondPage": (context) => secondPage(),
           "/mapsPage": (context) => Maps(),
-          "/mapsPage2": (context) => MapScreen(),
           "/firstPage": (context) => FirstPage(),
           "/loginPage": (context) => LoginPage(),
           "/signUp": (context) => SignUp(),
@@ -68,7 +65,7 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: CustomColors.scaffoldBackgroundColor,
         ),
         home: Scaffold(
-          body: EmailScreen(),
+          body: FirstPage(),
         ),
       ),
     );
